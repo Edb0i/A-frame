@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="script.js"></script>
+    
+  </head>
+  <body>
+    <a-scene>
+      
+       <a-entity
+        environment="preset: forest; ground: hills; groundtexture: none; groundColor: ; grid: cross; gridcolor: #ccc; seed: 1; fog: 1; ground: canyon; dressing: trees; dressingAmount: 30;"
+      ></a-entity>
+      
+        <a-assets>
+          
+          <a-asset-item id="bed" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(1).glb?v=1666632453981"></a-asset-item>
+          
+          <a-asset-item id="person" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(3).glb?v=1666733385558"></a-asset-item>
+          
+          <a-asset-item id="forest" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(4).glb?v=1666734198424"></a-asset-item>
+                        
+          <a-asset-item id="kitchen" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(5).glb?v=1666735335873"></a-asset-item>
+          
+          <a-asset-item id="dog" src="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(7).glb?v=1666741238392"></a-asset-item>
+
+          <a-asset-item id="bk1" src="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(6).glb?v=1668614199760"></a-asset-item>
+
+          <a-asset-item id="bk2" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222"></a-asset-item>
+
+          <a-asset-item id="bk3" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964"></a-asset-item>
+
+          <a-asset-item id="bk4" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577"></a-asset-item>
+
+          <a-asset-item id="bk5" src="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479"></a-asset-item>
+
+          
+        </a-assets>
+      
+   <a-entity
+             
+        rotation="0 0 0"
+             
+        animation__1="property: position; to:  0 0 1; dur: 2000;   
+                      startEvents: movecam_1"
+        animation__2="property: position; to:  0 0 -23.6; dur: 2000; 
+                      startEvents: movecam_2"
+        animation__3="property: position; to:  0 0 -44.6; dur: 2000; 
+                      startEvents: movecam_3"
+        animation__4="property: position; to:  0 0 -69.6; dur: 3000; 
+                      startEvents: movecam_4"
+        animation__5="property: position; to:  0 0 -108.6; dur: 3000; 
+                      startEvents: movecam_5"
+        animation__6="property: position; to:  0 0 -136.6; dur: 3000; 
+                      startEvents: movecam_6"
+        animation__7="property: position; to:  0 0 -192.6; dur: 3000; 
+                      startEvents: movecam_7" 
+        animation__1-1="property: position; to:  0 0 -6.6; dur: 2000; 
+                      startEvents: movecam_11" 
+        animation__1-2="property: position; to:  0 0 -10.6; dur: 2000; 
+                      startEvents: movecam_12" 
+        animation__1-3="property: position; to:  0 0 -14.6; dur: 2000; 
+                      startEvents: movecam_13" 
+        animation__1-4="property: position; to:  0 0 -18.6; dur: 2000; 
+                      startEvents: movecam_14"
+        animation__2-1="property: position; to:  0 0 -32.6; dur: 2000; 
+                      startEvents: movecam_21"
+        animation__2-2="property: position; to:  0 0 -35.6; dur: 2000; 
+                      startEvents: movecam_22"
+        animation__2-3="property: position; to:  0 0 -38.6; dur: 2000; 
+                      startEvents: movecam_23"
+        animation__2-4="property: position; to:  0 0 -41.6; dur: 2000; 
+                      startEvents: movecam_24"
+        animation__3-1="property: position; to:  0 0 -63.6; dur: 2000; 
+                      startEvents: movecam_31"
+        animation__3-2="property: position; to:  0 0 -66.6; dur: 2000; 
+                      startEvents: movecam_32"
+        animation__4-1="property: position; to:  0 0 -98.6; dur: 2000; 
+                      startEvents: movecam_41"
+        animation__4-2="property: position; to:  0 0 -101.6; dur: 2000; 
+                      startEvents: movecam_42"
+        animation__4-3="property: position; to:  0 0 -104.6; dur: 2000; 
+                      startEvents: movecam_43"
+        animation__5-1="property: position; to:  0 0 -125.6; dur: 2000; 
+                      startEvents: movecam_51"
+        animation__5-2="property: position; to:  0 0 -128.6; dur: 2000; 
+                      startEvents: movecam_52"
+        animation__5-3="property: position; to:  0 0 -134.4; dur: 2000; 
+                      startEvents: movecam_53"
+        animation__6-1="property: position; to:  0 0 -150.6; dur: 2000; 
+                      startEvents: movecam_61"
+        animation__6-2="property: position; to:  0 0 -153.6; dur: 2000; 
+                      startEvents: movecam_62"
+        animation__6-3="property: position; to:  0 0 -160.6; dur: 2000; 
+                      startEvents: movecam_63"
+        animation__7-1="property: position; to:  0 0 -197.0; dur: 2000; 
+                      startEvents: movecam_71"
+        
+      >
+    
+          <a-entity
+            id="cam"
+            camera="userHeight: 2.5"
+            position="-0.404 5.640 96.926"
+            look-controls
+            cursor="rayOrigin: mouse"
+            wasd-controls
+            data-aframe-inspector-original-camera=""
+          ></a-entity>
+      </a-entity>     
+      
+
+      
+<!--   /*Box 1*/ -->
+  <a-entity id="one" position="0.194 3.818 98.742" rotation="0.000 -10.000 0.000">
+        <a-plane
+          id="modole1"
+          color="red"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="question1"
+          color="pink"
+          depth="0.1"
+          height="1"
+          width="4"
+          position="0.0 3.3 -4.8"
+          text="color:  black;  width:  4;  
+                value:  You wake up and want \n to do something 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="1choice1"
+          color="pink"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 2.400 -4.8"
+          text="color:  black;  width:  4;  
+                value:  Play video games;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="result1_1()"
+        >
+        </a-box>
+
+       <a-box 
+          id="1choice2"
+          color="pink"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 1.800 -4.8"
+          text="color:  black;  width:  4;  value:  Workout;  align:  center;  lineHeight:  0.65;  tabSize:  5.12;  zOffset:  0.131"
+           onclick="result1_2()"     
+        >
+        </a-box>
+      
+        <a-box 
+          id="1choice3"
+          color="pink"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 1.200 -4.8"
+          text="color:  black;  width:  4;  value:  Go out and relax;  align:  center;  lineHeight:  0.65;  tabSize:  5.12;  zOffset:  0.131"
+           onclick="result1_3()"     
+        >
+        </a-box>
+    
+        <a-box 
+          id="1choice4"
+          color="pink"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.600 -4.8"
+          text="color:  black;  width:  4;  value:  Think about life;  align:  center;  lineHeight:  0.65;  tabSize:  5.12;  zOffset:  0.131"
+           onclick="result1_4()"     
+        >
+        </a-box>
+      </a-entity>
+
+<!--   /*Box 2*/ -->
+  <a-entity id="two" position="0.365 3.695 75.198" rotation="0.000 -10.000 0.000">
+        <a-plane id="modole2" color="#FCF778" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+        <a-box id="question2" color="#CBD656" depth="0.1" height="1" width="4" position="0 3.3 -4.8" text="color: black; width: 4; value: After doing what you wanted to do you are \n hungry choose a food to eat.; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="2choice1" color="#CBD656" depth="0.1" height="0.5" width="2"
+          position="-0.010 2.400 -4.8" text="color: black; width: 4; value: Salad; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result2_1()" material="" geometry="">
+        </a-box>
+
+        <a-box id="2choice2" color="#CBD656" depth="0.1" height="0.5" width="2"
+          position="-0.010 1.800 -4.8" text="color: black; width: 4; value: Pizza; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result2_2()" material="" geometry="">
+        </a-box>
+    
+        <a-box id="2choice3" color="#CBD656" depth="0.1" height="0.5" width="2"
+          position="-0.010 1.200 -4.8" text="color: black; width: 4; value: Chicken; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result2_3()" material="" geometry="">
+        </a-box>
+        
+        <a-box id="2choice4" color="#CBD656" depth="0.1" height="0.5" width="2"
+          position="-0.010 0.600 -4.8" text="color: black; width: 4; value: Sandwich; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result2_4()" material="" geometry="">
+        </a-box>
+    </a-entity>
+      
+<!--   /*Box 3*/ -->
+  <a-entity id="three" position="-0.141 3.700 53.480">
+        <a-plane id="modole3" color="#67D235" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+       <a-box id="question3" color="#31B82F" depth="0.1" height="1.4" width="4" position="0 3.134 -4.8" text="color: black; width: 4; value: After eating you go out to a forest and see two paths before you, left and right,  which do you choose to go down?; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="3choice1" color="#31B82F" depth="0.1" height="0.5"  width="2"
+          position="-0.010 1.800 -4.8" text="color: black; width: 4; value: Left; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result3_1()" material="" geometry="">
+        </a-box>
+
+       <a-box id="3choice2" color="#31B82F" depth="0.1" height="0.5"  width="2"
+          position="-0.010 1.000 -4.8" text="color: black; width: 4; value: Right; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result3_2()" material="" geometry="">
+        </a-box>
+    </a-entity>
+  
+<!--   /*Box 4*/ -->
+  <a-entity id="four" position="-1.133 3.540 28.368" rotation="0.000 10.000 0.000">
+        <a-plane id="modole4" color="#20ED59" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+        <a-box id="question4" color="#20ED8A" depth="0.1" height="1.4" width="4" position="0 3.134 -4.8" text="color: black; width: 4; value: While walking down the path chosen you encounter a puppy, it ask you for pets and bellyrubs do you give it what it wants?; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="4choice1" color="#20ED8A" depth="0.1" height="0.5"  width="2"
+          position="-0.010 1.900 -4.8" text="color: black; width: 4; value: Of course I would; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result4_1()" material="" geometry="">
+        </a-box>
+
+        <a-box id="4choice2" color="#20ED8A" depth="0.1" height="0.5"  width="2"
+          position="-0.010 1.300 -4.8" text="color: black; width: 4; value: Yes, to the pets; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result4_2()" material="" geometry="">
+        </a-box>
+        
+        <a-box id="4choice3" color="#20ED8A" depth="0.1" height="0.5"  width="2"
+          position="-0.010 0.700 -4.8" text="color: black; width: 4; value: Yes, to the bellyrubs; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result4_3()" material="" geometry="">
+        </a-box>
+        
+    </a-entity>
+      
+<!--   /*Box 5*/ -->
+  <a-entity id="five" position="-0.014 3.800 -9.648">
+        <a-plane id="modole5" color="#07FDA4" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+        <a-box id="question5" color="#07FDD1" depth="0.1" height="2" width="4" position="0 2.9 -4.8" text="color: black; width: 4; value: What luck by giving the dog what it wanted \n you got a gps from it, you look around and see \n the forest is VERY foggy. Not knowing  how to get back you pull out you phone looking for directions home suddenly it dies. Choose what to do next?; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="5choice1" color="#07FDD1" depth="0.1" height="0.5" width="2"
+          position="-0.010 1.600 -4.8" text="color: black; width: 4; value: Scream and hope; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result5_1()" material="" geometry="">
+        </a-box>
+
+        <a-box id="5choice2" color="#07FDD1" depth="0.1" height="0.5" width="2"
+          position="-0.010 1.000 -4.8" text="color: black; width: 4; value: Retrace your steps; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result5_2()" material="" geometry="">
+        </a-box>
+        
+        <a-box id="5choice3" color="#07FDD1" depth="0.1" height="0.5" width="2"
+          position="-0.010 0.400 -4.8" text="color: black; width: 4; value: Wait for it; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result5_3()" material="" geometry="">
+        </a-box> 
+    </a-entity>
+  
+<!--   /*Box 6*/ -->
+  <a-entity id="six" position="1.496 3.800 -39.095" rotation="0.000 -10.000 0.000">
+        <a-plane id="modole6" color="#0391F8" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+        <a-box id="question6" color="#1B6EEB" depth="0.1" height="2" width="4" position="0 2.9 -4.8" text="color: black; width: 4; value: After trying all you could you decide to use the gps the puppy gave you but, its doesn’t work so you look for the puppy. However it is gone as well, you start to panic until a person comes up to you saying “you can get out of here easily, wanna know how?”; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="6choice1" color="#1B6EEB" depth="0.1" height="0.5"  width="2"
+          position="-0.010 1.600 -4.8" text="color: black; width: 4; value: Yes, please tell me; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result6_1()" material="" geometry="">
+        </a-box>
+
+        <a-box id="6choice2" color="#1B6EEB" depth="0.1" height="0.5"  width="2"
+          position="-0.010 1.000 -4.8" text="color: black; width: 4; value: You seem familiar; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result6_2()" material="" geometry="">
+        </a-box>
+    
+        <a-box id="6choice3" color="#1B6EEB" depth="0.1" height="0.5"  width="2"
+          position="-0.010 0.400 -4.8" text="color: black; width: 4; value: You shouldn't be here; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="result6_3()" material="" geometry="">
+        </a-box>
+    </a-entity>
+      
+<!--   /*Box 7*/ -->
+  <a-entity id="seven" position="-0.408 3.800 -93.758">
+        <a-plane id="modole7" color="#0E0E0E" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+       <a-box id="question71" color="#0E0E0E" depth="0.1" height="1" width="4" position="0 3.3 -4.8" text="color: white; width: 4; value: Wake Up and Remember Them; align: center; zOffset: 0.131" onclick="result7_1()" material="" geometry="">
+        </a-box>
+
+       <a-box id="question72" color="#0E0E0E" depth="0.1" height="1" width="4" position="0 2.1 -4.8" text="color: white; width: 4; value: Wake Up and Remember Them; align: center; zOffset: 0.131" onclick="result7_1()" material="" geometry="">
+        </a-box>
+    
+       <a-box id="question73" color="#0E0E0E" depth="0.1" height="1" width="4" position="0 1.0 -4.8" text="color: white; width: 4; value: Wake Up and Remember Them; align: center; zOffset: 0.131" onclick="result7_1()" material="" geometry="">
+        </a-box>
+    </a-entity>
+  
+<!--   /*Result 1-1*/ -->
+    <a-entity id="1-1" position="-0.408 3.800 93.004">
+        <a-plane id="modole1-1" color="#CE9797" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+       <a-box id="result1-1" color="#CE9797" depth="0.1" height="2" width="4" position="0.0 2.2 -5" text="color: black; width: 4; value: You enjoyed playing on your Pc, PS5, and etc. at the same time :3; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="choice1-1" color="#CBD656" depth="0.1" height="0.5" width="2"
+          position="-0.010 0.850 -4.8" text="color: black; width: 4; value:Next; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="camone2()" material="" geometry="">
+        </a-box>
+    </a-entity>  
+<!--   /*Result 1-2*/ -->
+    <a-entity id="1-2" position="-0.408 3.800 89.570">
+        <a-plane id="modole1-2" color="#CE9797" height="4" width="5" position="0 2 -5" material="" geometry="">
+        </a-plane>
+      
+       <a-box id="result1-2" color="#CE9797" depth="0.1" height="2" width="4" position="0.0 2.2 -5" text="color: black; width: 4; value: After working out your muscles have grown to be beefy just the way you wanted. Amazing; align: center; zOffset: 0.131" material="" geometry="">
+        </a-box>
+
+        <a-box id="choice1-2" color="#CBD656" depth="0.1" height="0.5" width="2"
+          position="-0.010 0.850 -4.8" text="color: black; width: 4; value:Next; align: center; lineHeight: 0.65; tabSize: 5.12; zOffset: 0.131" onclick="camone2()" material="" geometry="">
+        </a-box>
+    </a-entity>
+<!--   /*Result 1-3*/     -->
+    <a-entity id="1-3" position="-0.408 3.800 85.190">
+        <a-plane
+          id="modole1-3"
+          color="#CE9797"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result1-3"
+          color="#CE9797"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  You look into the lovely green sky, and take in the fresh air, feeling at ease. uwu
+                ; align: center;  
+                tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice1-3"
+          color="#CBD656"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone2()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 1-4*/ -->
+    <a-entity id="1-4" position="-0.408 3.800 81.045">
+        <a-plane
+          id="modole1-4"
+          color="#CE9797"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result1-4"
+          color="#CE9797"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  You wonder how you got to this point in your life.  letting memories come through. Looking around  you feel something is wrong but don’t know what 
+                ; align: center;  
+                tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice1-4"
+          color="#CBD656"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone2()"
+        >
+        </a-box>
+    </a-entity> 
+<!--   /*Result 2-1*/ -->
+    <a-entity id="2-1" position="-0.408 3.800 67.382">
+        <a-plane
+          id="modole2-1"
+          color="#CBD656"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result2-1"
+          color="#CBD656"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  Well well look who is a healthy person, don't forget the ranch. I know you are forgetful. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice2-1"
+          color="#31B82F"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone3()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 2-2*/ -->
+    <a-entity id="2-2" position="-0.408 3.800 64.106">
+        <a-plane
+          id="modole2-2"
+          color="#CBD656"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result2-2"
+          color="#CBD656"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  You ate 2 boxes of pizza I can’t believe you ate it  all within 10 minutes. I was hoping to eat some  leftovers 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice2-2"
+          color="#31B82F"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone3()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 2-3*/ -->
+    <a-entity id="2-3" position="-0.408 3.800 61.111">
+        <a-plane
+          id="modole2-3"
+          color="#CBD656"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result2-3"
+          color="#CBD656"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  Man you ate that whole chicken, even the bones you monster. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice2-3"
+          color="#31B82F"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone3()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 2-4*/   -->
+    <a-entity id="2-4" position="-0.408 3.800 58.083">
+        <a-plane
+          id="modole2-4"
+          color="#CBD656"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result2-4"
+          color="#CBD656"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  You ate someone’s sandwich from the fridge,\n in the distance you hear screaming. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice2-4"
+          color="#31B82F"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone3()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 3-1*/ -->
+    <a-entity id="3-1" position="-0.408 3.800 36.061">
+        <a-plane
+          id="modole3-1"
+          color="#31B82F"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result3-1"
+          color="#31B82F"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  Going left bring a calm feeling at first, then a  feeling of deja vu as it seems like you saw the same tree already. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice3-1"
+          color="#20ED8A"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone4()"
+        >
+        </a-box>
+    </a-entity> 
+<!--   /*Result 3-2*/ -->
+    <a-entity id="3-2" position="-0.408 3.800 32.494">
+        <a-plane
+          id="modole3-2"
+          color="#31B82F"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result3-2"
+          color="#31B82F"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  Going right brings back memories of when you  came here as a kid........ these aren’t your  memories. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice3-2"
+          color="#20ED8A"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone4()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 4-1*/ -->
+    <a-entity id="4-1" position="-0.408 3.800 1.170">
+        <a-plane
+          id="modole4-1"
+          color="#20ED8A"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result4-1"
+          color="#20ED8A"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  By giving the puppy what it wants you made it’s year as no one else even knows of its existence but you. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice4-1"
+          color="#07FDD1"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone5()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 4-2*/ -->
+    <a-entity id="4-2" position="-0.408 3.800 -1.607">
+        <a-plane
+          id="modole4-2"
+          color="#20ED8A"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result4-2"
+          color="#20ED8A"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  By giving the puppy what it partially wanted, it is sad that you didn’t give it the other. This similar to winning a friend but losing one at the same time. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice4-2"
+          color="#07FDD1"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone5()"
+        >
+        </a-box>
+    </a-entity> 
+<!--   /*Result 4-3*/ -->
+    <a-entity id="4-3" position="-0.408 3.800 -4.804">
+        <a-plane
+          id="modole4-3"
+          color="#20ED8A"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result4-3"
+          color="#20ED8A"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  By giving the puppy what partially wanted, it is but sad that you didn’t give it the other. It’s like saving someone from a wild animal but you used  someone as bait.
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice4-3"
+          color="#07FDD1"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next  ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone5()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 5-1*/ -->
+    <a-entity id="5-1" position="-0.408 3.800 -25.748">
+        <a-plane
+          id="modole5-1"
+          color="#07FDD1"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result5-1"
+          color="#07FDD1"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  Screaming just lead to your voice echoing into nothing. No one even bothered to respond.
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice5-1"
+          color="#1B6EEB"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone6()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 5-2*/ -->
+    <a-entity id="5-2" position="-0.408 3.800 -28.571">
+        <a-plane
+          id="modole5-2"
+          color="#07FDD1"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result5-2"
+          color="#07FDD1"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  You try to go backwards , but it just leads back to the same tree. but hey atleast you have a puppy to keep you company. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice5-2"
+          color="#1B6EEB"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone6()"
+        >
+        </a-box>
+    </a-entity> 
+<!--   /*Result 5-3*/ -->
+    <a-entity id="5-3" position="-0.408 3.800 -34.411">
+        <a-plane
+          id="modole5-3"
+          color="#07FDD1"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result5-3"
+          color="#07FDD1"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  So you realized what is coming, this must have  happened already to you or you wouldn’t have  chosen this one. Well hope it isn’t as impactful as last time. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice5-3"
+          color="#1B6EEB"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone6()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 6-1*/ -->
+    <a-entity id="6-1" position="-0.408 3.800 -50.402">
+        <a-plane
+          id="modole6-1"
+          color="#1B6EEB"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result6-1"
+          color="#1B6EEB"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  “Finally a way to get out”, you think to yourself. Now let’s get out of here. 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice6-1"
+          color="#333232"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone7()"
+        >
+        </a-box>
+    </a-entity> 
+<!--   /*Result 6-2*/ -->
+    <a-entity id="6-2" position="-0.408 3.800 -53.855">
+        <a-plane
+          id="modole6-2"
+          color="#1B6EEB"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result6-2"
+          color="#1B6EEB"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  “I am someone you used to think of”, they say. “You forgotten who I am so I can’t do anything about it but here is the way out.”  
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice6-2"
+          color="#333232"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone7()"
+        >
+        </a-box>
+    </a-entity> 
+<!--   /*Result 6-3*/ -->
+    <a-entity id="6-3" position="-0.408 3.800 -62.052">
+        <a-plane
+          id="modole6-3"
+          color="#1B6EEB"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="result6-3"
+          color="#1B6EEB"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  black;  width:  4;  
+                value:  You and person just look at each other for what feel like hours. The person breaks the silence, “If you know that much we must have meet many times, i'm surprised you remember me. Congrats for getting this far sadly it will end as you already know.” 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+
+        <a-box
+          id="choice6-3"
+          color="#333232"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  black;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone7()"
+        >
+        </a-box>
+    </a-entity>
+<!--   /*Result 7-1*/ -->
+    <a-entity id="7-1" position="-0.408 3.800 -98.870">
+        <a-plane
+          id="modole7-1"
+          color="#333232"
+          height="4"
+          width="5"
+          position="0 2 -5"
+         >
+        </a-plane>
+      
+       <a-box
+          id="wakeupandremember1"
+          color="#333232"
+          depth="0.1"
+          height="2"
+          width="4"
+          position="0.0 2.2 -5"
+          text="color:  white;  width:  4;  
+                value:  You will be back here again I know it. However it will be awhile so you will forget this happened.  Hopefully you can remember something from this. Then you will understand better. Goodbye old friend 
+                ; align: center;  
+              ''  tabSize:  5.12;  
+                zOffset:  0.131"
+        >
+        </a-box>
+      
+        <a-box
+          id="restart"
+          color="red"
+          depth="0.1"
+          height="0.5"
+          width="2"
+          position="-0.010 0.850 -4.8"
+          text="color:  white;  width:  4;  
+                value:Next ;  align:  center;  
+                lineHeight:  0.65;  tabSize:  5.12;  
+                zOffset:  0.131"
+          onclick="camone1()"
+        >
+        </a-box>
+    </a-entity>
+      
+
+      
+  <a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: #24b59f; bottomColor: #eff9b7" visible="" geometry="" scale="1 1 1"></a-sky>
+         
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(1).glb?v=1666632453981" scale="20.23 20.1 20.24" position="-0.225 3.667 93.071"></a-entity>      
+  
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(3).glb?v=1666733385558" scale="0.056 0.036 0.036" position="-3.033 0.490 -43.988"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(4).glb?v=1666734198424" scale="0.052 0.082 0.052" position="-0.715 -3.813 10.931"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(4).glb?v=1666734198424" scale="0.052 0.082 0.062" position="-0.725 -4.789 -21.858"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(4).glb?v=1666734198424" scale="0.062 0.102 0.082" position="0.198 -5.046 -57.255"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(4).glb?v=1666734198424" scale="0.042 0.062 0.032" position="-0.715 -3.186 41.196"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(5).glb?v=1666735335873" scale="1.24 0.66 0.6" position="-0.358 2.767 67.790" visible=""></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(7).glb?v=1666741238392" scale="2.7 2.59 2.57" position="2.716 -0.029 19.917"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(6).glb?v=1668614199760" scale="2.7 2.59 2.57" position="-27.06494 -0.029 31.17187" rotation="0 20 0"></a-entity>
+
+<a-entity gltf-model="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(6).glb?v=1668614199760" scale="2.7 2.59 2.57" position="49.73463 -0.029 -4.78353" rotation="0 -100 0"></a-entity>     
+
+<a-entity gltf-model="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(6).glb?v=1668614199760" scale="2.7 2.59 2.57" position="-22.29315 -0.029 -43.66261" rotation="0 50 0"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(6).glb?v=1668614199760" scale="2.7 2.59 2.57" position="37.60675 -0.029 58.4034" rotation="0 40 0"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.me/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(6).glb?v=1668614199760" scale="2.7 2.59 2.57" position="-0.12524 -0.029 103.20038" rotation="0 180 0"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222" scale="2.7 2.59 2.57" position="89.10533 24.63467 19.917"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222" scale="2.7 2.59 2.57" position="2.716 29.88501 57.41765"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222" scale="2.7 2.59 2.57" position="-26.06685 25.76474 19.917"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222" scale="2.7 2.59 2.57" position="-47.16809 48.25291 -14.58035"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222" scale="2.7 2.59 2.57" position="20.49962 26.92064 -40.22542"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(8).glb?v=1668614226222" scale="2.7 2.59 2.57" position="40.82069 23.36333 50.9603"></a-entity>      
+            
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="6.29 5.44 -6.81" position="96.17228 22.38901 -93.91141"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="6.29 5.44 -13.09" position="76.7375 9.77975 -99.82706" rotation="4.15 -4 -7.27"></a-entity>
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="6.29 5.44 5.11" position="102.1567 8.39847 14.34408"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="8.74 5.44 4.25" position="83.99288 13.2525 -52.65754" rotation="2.68 -21.17 -5.94"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="6.29 5.44 4.25" position="7.65109 9.77935 -33.56015" rotation="0 -36.32 0"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="4.09 4.18 4.25" position="2.716 11.24101 -27.41742"></a-entity>     
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="7.01 -7.65 6.02" position="17.47911 42.15661 -33.1173"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(9).glb?v=1668614239964" scale="6.29 5.44 4.25" position="2.716 34.56581 19.917"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.14 0.07 0.14" position="-66.41316 -0.029 52.62543"></a-entity>
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.14 0.07 0.14" position="46.88301 -0.029 19.917"></a-entity>
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.09 0.07 0.07" position="-45.66067 -0.029 78.21648"></a-entity>      
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.05 0.07 0.05" position="-18.66662 -0.029 70.22021"></a-entity>      
+ 
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="-45.02823 -0.029 22.6185"></a-entity>
+ 
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.09 0.06 0.14" position="-32.61896 -0.029 -14.25054"></a-entity>      
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="-74.94699 -0.029 -6.34236"></a-entity>      
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="-68.05332 -0.029 -68.77067"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="-33.77146 -0.029 -79.85632"></a-entity>   
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="29.93878 -0.029 -86.5861"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.07 0.05 0.09" position="46.88301 -0.029 -49.82914"></a-entity>      
+
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="67.44068 -0.029 -15.70097"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="46.88301 -0.029 19.917"></a-entity>      
+  
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.08 0.07 0.08" position="27.51244 -0.029 59.66665"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.06 0.07 0.08" position="74.72401 -0.029 57.05555"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(10).glb?v=1668614251577" scale="0.07 0.07 0.07" position="16.03749 -0.029 87.0537"></a-entity>     
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479" scale="0.19 0.14 0.13" position="-50.461 13.36408 -20.44538"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479" scale="0.11 0.08 -0.14" position="-78.05534 9.17781 77.02061"></a-entity>
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479" scale="0.11 0.08 -0.14" position="51.65689 9.17781 77.02061" rotation="-11.42 29.999999999999996 0.24"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479" scale="0.11 0.08 -0.14" position="72.76385 9.17781 -5.5518" rotation="0 100 0"></a-entity>      
+      
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479" scale="0.11 0.08 -0.14" position="43.208 9.17781 -72.16751" rotation="0 130 0"></a-entity>      
+ 
+<a-entity gltf-model="https://cdn.glitch.global/95dcd291-3ce1-4059-83ff-89163519906f/scene%20(11).glb?v=1668614273479" scale="0.11 0.08 -0.14" position="-78.05534 10.54995 -57.41456"></a-entity>      
+      
+    </a-scene>
+  </body>
+</html>
